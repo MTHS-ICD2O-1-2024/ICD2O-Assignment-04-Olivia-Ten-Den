@@ -1,9 +1,78 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <p>Paragraph</p>
-  </body>
+<!-- ICS2O-Unit5-04-HTML-JS -->
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Museum Entry Discount, with JavaScript" />
+  <meta name="keywords" content="mths, icd2o" />
+  <meta name="author" content="Olivia TD" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <title>Museum Entry Discount, with JavaScript</title>
+</head>
+
+<body>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="./js/script.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Museum Entry Discount, with JavaScript</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="right-image">
+        <img src="./images/museum.png" alt="Image of the outside of a museum." />
+      </div>
+      <div class="page-content">
+        Please enter your age and the day of the week.
+      </div>
+      <br />
+      <form>
+        <h6>Age:</h6>
+        <div class="mdl-textfield mdl-js-textfield">
+          <!-- input pattern attribute -->
+          <input class="mdl-textfield__input" type="number" min="0" id="age" name="age" />
+          <!-- mdl-textfield__label -->
+          <label class="mdl-textfield__label" for="age">Enter your age here...
+          </label>
+          <!-- class "mdl-textfield__error" -->
+          <span class="mdl-textfield__error">Input is not a valid number.</span>
+        </div>
+        <br />
+        <div>
+          <label for="day">
+            <h6>Choose the day of the week:</h6>
+          </label>
+          <select name="day" id="day">
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+          </select>
+        </div>
+        <br />
+        <div>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" onclick="checkDiscount()"
+            type="button">
+            Check
+          </button>
+        </div>
+      </form>
+      <br />
+      <div class="page-content-answer">
+        <div id="result"></div>
+      </div>
+    </main>
+  </div>
+</body>
 </html>
